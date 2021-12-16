@@ -49,6 +49,82 @@ actions
         box     (-0.6 -0.6 -1.0) (0.6 0.6 39.99);
         }
     }
+// new faceset bottom
+    {
+        name    bottompatch;
+        type    faceSet;
+        action  new;
+        source  faceToFace;
+        sourceInfo
+        {
+        set     cylinder;
+        }
+    }
+
+    {
+        name    bottompatch;
+        type    faceSet;
+        action  delete;
+        source  faceToFace;
+        sourceInfo
+        {
+        set     bottom_patch_negative;
+        }
+    }
+// new faceset top
+    {
+        name    toppatch;
+        type    faceSet;
+        action  new;
+        source  faceToFace;
+        sourceInfo
+        {
+        set     cylinder;
+        }
+    }
+
+    {
+        name    toppatch;
+        type    faceSet;
+        action  delete;
+        source  faceToFace;
+        sourceInfo
+        {
+        set     top_patch_negative;
+        }
+    }
+// new faceset middle
+    {
+        name    wall;
+        type    faceSet;
+        action  new;
+        source  faceToFace;
+        sourceInfo
+        {
+        set     cylinder;
+        }
+    }
+
+    {
+        name    wall;
+        type    faceSet;
+        action  delete;
+        source  faceToFace;
+        sourceInfo
+        {
+        set     toppatch;
+        }
+    }
+    {
+        name    wall;
+        type    faceSet;
+        action  delete;
+        source  faceToFace;
+        sourceInfo
+        {
+        set     bottompatch;
+        }
+    }
 );
 
 // ************************************************************************* //
