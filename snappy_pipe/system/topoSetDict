@@ -22,9 +22,33 @@ actions
         type    faceSet;
         action  new;
         source  patchToFace;
-        cylinder;
+        sourceInfo
+	{
+	patch	cylinder;	
+	}
     }
 
+    {
+        name    bottom_patch_negative;
+        type    faceSet;
+        action  new;
+        source  boxToFace;
+        sourceInfo
+        {
+        box     (-0.6 -0.6 0.01) (0.6 0.6 41);
+        }
+    }   
+   
+    {
+        name    top_patch_negative;
+        type    faceSet;
+        action  new;
+        source  boxToFace;
+        sourceInfo
+        {
+        box     (-0.6 -0.6 -1.0) (0.6 0.6 39.99);
+        }
+    }
 );
 
 // ************************************************************************* //
