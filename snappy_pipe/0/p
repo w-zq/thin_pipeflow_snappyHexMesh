@@ -20,19 +20,20 @@ internalField   uniform 0;
 
 boundaryField
 {
-    movingWall
+    toppatch
+    {
+        type            fixedValue;
+	value		uniform 0;
+    }
+
+    wall
     {
         type            zeroGradient;
     }
 
-    fixedWalls
+    bottompatch
     {
         type            zeroGradient;
-    }
-
-    frontAndBack
-    {
-        type            empty;
     }
 }
 
