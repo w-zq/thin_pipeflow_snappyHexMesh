@@ -15,7 +15,7 @@ FoamFile
 }
 // * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
 
-application     icoFoam;
+application     pisoFoam;
 
 startFrom       latestTime;
 
@@ -23,13 +23,13 @@ startTime       0;
 
 stopAt          endTime;
 
-endTime         500000.5;
+endTime         100000.5;
 
 deltaT          25;
 
 writeControl    timeStep;
 
-writeInterval   2e3;
+writeInterval   500;
 
 purgeWrite      0;
 
