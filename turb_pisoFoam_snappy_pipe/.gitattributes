@@ -1,0 +1,2 @@
+log.pisoFoam filter=lfs diff=lfs merge=lfs -text
+../.gitattributes filter=lfs diff=lfs merge=lfs -text
