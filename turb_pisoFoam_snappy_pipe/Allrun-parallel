@@ -7,17 +7,17 @@ cd "${0%/*}" || exit                                # Run from this directory
 
 runApplication blockMesh
 
-runApplication decomposePar
+runApplication snappyHexMesh -overwrite
 
-runParallel snappyHexMesh -overwrite
-
-restore0Dir -processor
+restore0Dir 
 
 runApplication topoSet
 
 runApplication createPatch -overwrite
 
 touch refined_pisoFoam_snappy_pipe.foam
+
+runApplication decomposePar
 
 runParallel pisoFoam
 
