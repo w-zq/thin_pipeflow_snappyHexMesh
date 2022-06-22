@@ -1,0 +1,29 @@
+./Allclean
+
+
+
+cd "${0%/*}" || exit                                # Run from this directory
+. ${WM_PROJECT_DIR:?}/bin/tools/RunFunctions      # Tutorial run functions
+
+runApplication blockMesh
+
+runApplication snappyHexMesh -overwrite
+
+restore0Dir 
+
+runApplication topoSet
+
+runApplication createPatch -overwrite
+
+touch refined_pisoFoam_snappy_pipe.foam
+
+runApplication decomposePar
+
+runParallel pisoFoam
+
+runApplication reconstructPar
+
+
+
+
+
