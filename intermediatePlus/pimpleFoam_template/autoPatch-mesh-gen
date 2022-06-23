@@ -11,4 +11,7 @@ runApplication blockMesh
 runApplication snappyHexMesh -overwrite
 transformPoints -scale '(0.01 0.01 0.01)' # FOR SHRINKING THE MODEL
 autoPatch -overwrite 75    # FOR SEPERATE THE PATCH
+
+createPatch -dict system/createPatchDict_autoPatch -overwrite
+
 touch pisoFoam_snappy_pipe.foam

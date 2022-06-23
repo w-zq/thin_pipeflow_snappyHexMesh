@@ -9,9 +9,9 @@ Build  : v2006 OPENFOAM=2006
 Arch   : "LSB;label=32;scalar=64"
 Exec   : blockMesh
 Date   : Jun 23 2022
-Time   : 07:32:29
+Time   : 13:54:27
 Host   : fluid
-PID    : 80890
+PID    : 74540
 I/O    : uncollated
 Case   : /home/fluid/part2/wzq/GitHub_OpenFOAM/thin_pipeflow_snappyHexMesh/intermediatePlus/pimpleFoam_template
 nProcs : 1
